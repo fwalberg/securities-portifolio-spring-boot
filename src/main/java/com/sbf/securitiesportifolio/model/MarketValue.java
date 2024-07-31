@@ -11,16 +11,13 @@ import java.time.LocalDateTime;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Entity(name = "MARKET_VALUE")
 public class MarketValue {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-    @OneToOne
-    @JoinColumn(name = "stock_id", nullable = false)
-    private Stock stock;
 
     @Column(nullable = false, precision = 10)
     private Integer quantity;

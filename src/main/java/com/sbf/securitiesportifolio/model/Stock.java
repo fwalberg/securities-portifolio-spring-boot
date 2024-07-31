@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Entity(name = "STOCK")
 public class Stock {
     @Id
@@ -21,16 +22,17 @@ public class Stock {
     @Column(length = 6, nullable = false, unique = true)
     private String tickerSymbol;
 
-    @Column(length = 1, nullable = false)
+    @Column(length = 1, nullable = true)
     private Integer typeOfStock;
 
-    @Column(length = 100, nullable = false)
+    @Column(length = 100, nullable = true)
     private String sectorAndIndustry;
 
     @Column(length = 9, unique = true)
     private String isinCode;
 
-    @OneToOne(mappedBy = "stock", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "marketvalue_id")
     private MarketValue marketValue;
 
 }
