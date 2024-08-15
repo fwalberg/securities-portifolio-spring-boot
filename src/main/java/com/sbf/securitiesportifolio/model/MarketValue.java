@@ -2,9 +2,9 @@ package com.sbf.securitiesportifolio.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.data.annotation.AccessType;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Getter
@@ -29,10 +29,10 @@ public class MarketValue {
     private BigDecimal currentPrice;
 
     @Column(nullable = false, updatable = false)
-    private LocalDateTime purchaseDate;
+    private LocalDate purchaseDate;
 
     @Column(updatable = false)
-    private LocalDateTime saleDate;
+    private LocalDate saleDate;
 
     private LocalDateTime lastUpdate;
 }
