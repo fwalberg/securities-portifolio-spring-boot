@@ -1,5 +1,5 @@
 ## Securities Portifolio
-##### Este é um projeto básico Spring Boot e a linguagem Java. Consiste em uma API CRUD que implementa um controle de carteria de valores mobiliários.
+##### Este é um projeto básico Spring Boot usando a linguagem Java. Consiste em uma API CRUD que implementa um controle de carteria de valores mobiliários.
 
 ##### O projeto ainda está em andamento, então algumas funcionalidade podem ainda não estarem implementadas.
 
